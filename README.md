@@ -1,23 +1,9 @@
-# webapp
-WebApp for Ktquez Play project
+# DFTAI automation website
 
-> README informations in development
+if you want to contribute all you need to do is create a pull request with a new post.
 
-# Categories
-| EN               | PT               | ES             |
-|------------------|------------------|----------------|
-| html5            | html5            | html5          |
-| entrepreneurship | empreendedorismo | emprendimiento |
-| php              | php              | php            |
-| vuejs            | vuejs            | vuejs          |
-| webperformance   | webperformance   | webperformance |
-| javascript       | javascript       | javascript     |
-| lifestyle        | lifestyle        | lifestyle      |
-|                  |                  |                |
+Make sure that you add yourself as a new author and you that assign the appropriate categories
+and tags so that people can find it in the future.
 
-# Locales (lang in frontmatter to posts, authors and categories)
-| lang  |
-|-------|
-| pt-br |
-| en    |
-| es    |
+
+Other than that have fun and thanks for contributing to DFTAI

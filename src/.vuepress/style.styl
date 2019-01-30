@@ -1,0 +1,36 @@
+@import '~@theme/styles/config.styl'
+
+.header-nav__link
+  &:nth-child(1)
+    background-color: $primaryColorFade
+
+  &:nth-child(2)
+    background-color: $primaryColor
+
+  &:nth-child(3)
+    background-color: $accessColorFade
+
+  &:nth-child(4)
+    background-color: $accessColor
+
+.bullet
+  background-color: $primaryColor !important
+
+.content.custom
+  > .typeform
+    &--fix
+      overflow: hidden
+      min-height: 500px
+
+      .lazy-load-iframe
+        margin-top: -350px
+
+.content.custom > .email-link
+  display: none
+
+@media (max-width: 480px)
+  .content.custom > .typeform
+    display: none
+
+  .content.custom > .email-link
+    display: block

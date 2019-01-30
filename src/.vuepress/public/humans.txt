@@ -1,0 +1,21 @@
+Humans.txt is a legal initiative of (humanstxt.org), to talk a little about who is behind the web-based applications, the team involved and the stack used.
+Remembering, we are human beings and not machines.
+
+/* PROJECT */
+  Site name: DFTAI
+  Site URL: https://dftai.ch/
+  Last update: 2019-01-29 00:00:00
+  Language: English
+  Twitter: https://twitter.com/rd_bartram/
+  Contact: rdbartram@live.com
+  Built with: Vue.js (Vuepress), HTML5, CSS3, Accessibility techniques, PWA e SEO
+  Software: Visual Code Studio (VS Code)
+
+/* AUTHOR */
+	Name:        Ryan Bartram
+	Nickname:    rdbartram
+	Title:       DFTAI Owner
+	Location:    Thurgau, Switzerland
+	Site:        https://dftai.ch/
+  Twitter:     https://twitter.com/rd_bartram/
+  Github:      https://github.com/rd_artram/
