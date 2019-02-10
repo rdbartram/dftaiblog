@@ -125,9 +125,7 @@ function Set-MainContent ($Tab) {
 }
 ```
 
-![](https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif)
-
-> To improve the user experience, before the popMain is called, a loading gif is set to the Main div so the user is aware of something happening and has something nice to look at.
+> <lazy-load tag="img" :data="{ src: 'https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif', alt: 'spinning wheel', width:75, style:'float:left; margin: 0 15px 0 0' }" /> To improve the user experience, before the popMain is called, a loading gif is set to the Main div so the user is aware of something happening and has something nice to look at.
 
   ### popMain
 
