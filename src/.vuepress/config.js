@@ -4,7 +4,6 @@ const themeConfig = require('./config/themeConfig')
 const resolve = pathName => path.join(__dirname, pathName)
 
 module.exports = {
-  theme: 'ktquez',
   base: '/',
   title: '',
   head,
