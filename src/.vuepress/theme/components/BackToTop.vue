@@ -1,9 +1,9 @@
 <template>
   <div class="elevator">
-    <a 
+    <a
       @click="fired"
-      class="elevator__link" 
-      ref="arrowTop" 
+      class="elevator__link"
+      ref="arrowTop"
       :class="{ 'elevator__link--show': show, 'elevator__link--fire': fire }">
         <span class="icon elevator__icon">greaterthan</span>
     </a>
@@ -88,7 +88,7 @@
     display: inline-block
     transition: bottom .5s
     right: 12vw
-    bottom: -300px
+    bottom: -10%
     opacity: 0
     visibility: hidden
     cursor: pointer
@@ -97,9 +97,9 @@
 
     &--fire
       animation: fire 1s linear infinite
-    
+
     &--show
-      bottom: 300px
+      bottom: 10%
       opacity: 1
       visibility: visible
 
