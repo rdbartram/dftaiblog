@@ -2,8 +2,8 @@
 module.exports = [
   ['meta', { 'http-equiv': 'x-ua-compatible', content: 'ie=edge' }],
   ['meta', { name: 'apple-mobile-web-app-title', content: 'DFTAI | Don\'t Forget To Automate It' }],
-  ['meta', { name: 'theme-color', content: '#01B6D1' }],
-  ['meta', { name: 'msapplication-navbutton-color', content: '#E0357D' }],
+  ['meta', { name: 'theme-color', content: '#FBB236' }],
+  ['meta', { name: 'msapplication-navbutton-color', content: '#EC726E' }],
   ['meta', { name: 'mobile-web-app-capable', content: 'yes' }],
   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black-translucent' }],
   ['meta', { name: 'coverage', content: 'WorldWide' }],
@@ -13,7 +13,7 @@ module.exports = [
 
   // Microsoft
   ['meta', { name: 'application-name', content: 'DFTAI | Don\'t Forget To Automate It' }],
-  ['meta', { name: 'msapplication-TileColor', content: '#01B6D1' }],
+  ['meta', { name: 'msapplication-TileColor', content: '#FBB236' }],
   ['meta', { name: 'msapplication-config', content: '/browserconfig.xml' }],
   ['meta', { name: 'msapplication-square70x70logo', content: '/favicon/ms-icon-70x70.png' }],
   ['meta', { name: 'msapplication-TileImage', content: '/favicon/ms-icon-144x144.png' }],
@@ -63,7 +63,7 @@ module.exports = [
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-32x32.png', sizes: '32x32' }],
   ['link', { rel: 'icon', type: 'image/png', href: '/favicon/favicon-16x16.png', sizes: '16x16' }],
 
-  ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#ff5733' }],
+  ['link', { rel: 'mask-icon', href: '/favicon/safari-pinned-tab.svg', color: '#EC726E' }],
   ['link', { rel: 'shortcut icon', href: '/favicon/favicon.ico' }],
 
 
@@ -84,4 +84,15 @@ module.exports = [
   ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }],
 
   ['link', { rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', as: "script" }]
+
+  ['link', { rel: 'preload', href: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', as: "script" }]
+
+  ['script', {}, `
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "34c30a9a-6377-4614-97fb-78384aaaab26",
+    });
+  });
+    `]
 ]
