@@ -83,16 +83,16 @@ module.exports = [
   ['link', { rel: 'preconnect', href: 'https://www.google-analytics.com/' }],
   ['link', { rel: 'preconnect', href: 'https://stats.g.doubleclick.net' }],
 
-  ['link', { rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', as: "script" }]
+  ['link', { rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', as: "script" }],
 
-  ['link', { rel: 'preload', href: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', as: "script" }]
+  ['link', { rel: 'preload', href: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', as: "script" }],
 
   ['script', {}, `
-  var OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "34c30a9a-6377-4614-97fb-78384aaaab26",
-    });
-  });
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "34c30a9a-6377-4614-97fb-78384aaaab26",
+        });
+      });
     `]
 ]
