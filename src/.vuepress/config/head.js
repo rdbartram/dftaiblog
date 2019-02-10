@@ -85,7 +85,8 @@ module.exports = [
 
   ['link', { rel: 'preload', href: 'https://www.google-analytics.com/analytics.js', as: "script" }],
 
-  ['link', { rel: 'preload', href: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', as: "script" }],
+  // OneSignal
+  ['script', { src: 'https://cdn.onesignal.com/sdks/OneSignalSDK.js', async: '' }],
 
   ['script', {}, `
       var OneSignal = window.OneSignal || [];
