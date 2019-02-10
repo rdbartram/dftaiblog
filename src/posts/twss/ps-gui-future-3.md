@@ -6,7 +6,7 @@ author: rdbartram
 title: "the PowerShell GUI of the future III : PowerShell and...JavaScript...."
 description: Creating GUIs in PowerShell is possible but how useful is it day to day
 excerpt: Creating GUIs in PowerShell is possible but how useful is it day to day
-cover: true
+cover: false
 coverAlt: Illustration of the sun rising on a new day
 demo: https://github.com/rdbartram/PSConfEUGUI
 audio:
@@ -21,14 +21,14 @@ created_at: 2017-04-20 19:00
 
 meta:
   - property: og:image
-    content: /images/posts/2017/4/ps-gui-future-3.png
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: /images/posts/2017/4/ps-gui-future-3.png
+    content: /share/dftai-image-share.png
 ---
 
 JavaScript or JS is a programming language used to make static webpages interactive. Maybe you've come across it before if you are familiar with website design, there are many cool JS frameworks out there such as Angular, Vue, React etc. As I mentioned before, using something like Angular would allow you to easily run a fully functional website which by following the post would allow you to execute PowerShell on the Server hosting the Website. That is getting a little too advanced for this series of posts but if you are interested in seeing what Angular and PowerShell can do together, take a look at the [Phosphor](https://github.com/PowerShell/Phosphor) project over on Microsoft's GitHub. They are trying to automate the creation of a generic GUI for any and all PowerShell modules and scripts.
 
-This post details how to take the PowerShell GUI, you hopefully already created following parts [1](http://www.dftai.ch/gui/ps-gui-future-1/) and [2](http://www.dftai.ch/gui/ps-gui-future-2/) of this series, and do the interactive bit i.e. executing PowerShell and altering the GUI as necessary.
+This post details how to take the PowerShell GUI, you hopefully already created following parts [1](ps-gui-future-1) and [2](ps-gui-future-2) of this series, and do the interactive bit i.e. executing PowerShell and altering the GUI as necessary.
 
 For this example I have written 1 main "get-function" and 2 "set-functions":
 
@@ -38,7 +38,7 @@ For this example I have written 1 main "get-function" and 2 "set-functions":
 
 ## Code
 
-As I mentioned in [Part 1](http://www.dftai.ch/gui/ps-gui-future-1/) there is a custom C# class that is processing all of the PowerShell being sent from the GUI. This class is added using the Add-Type CMDLet, you can see this in the main New-GUI function.
+As I mentioned in [Part 1](ps-gui-future-1) there is a custom C# class that is processing all of the PowerShell being sent from the GUI. This class is added using the Add-Type CMDLet, you can see this in the main New-GUI function.
 
 ```powershell
 function New-GUI {

@@ -6,7 +6,7 @@ author: rdbartram
 title: "the PowerShell GUI of the future II : HTML and CSS"
 description: Creating GUIs in PowerShell is possible but how useful is it day to day
 excerpt: Creating GUIs in PowerShell is possible but how useful is it day to day
-cover: true
+cover: false
 coverAlt: Illustration of the sun rising on a new day
 demo: https://github.com/rdbartram/PSConfEUGUI
 audio:
@@ -22,14 +22,14 @@ updated_at: 2017-04-15 19:00
 
 meta:
   - property: og:image
-    content: /images/posts/2017/4/ps-gui-future-2.png
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: /images/posts/2017/4/ps-gui-future-2.png
+    content: /share/dftai-image-share.png
 ---
 
 HTML and CSS are the basis upon which the internet is built; every webpage is made up of HTML and invariably CSS. Most likely you've already written some HTML/CSS at school whilst in an IT class, and hopefully, it's this basic knowledge we are going to build upon to create your PowerShell GUI.
 
-If you haven't already read how to create the XAML form which will be holding the HTML, please check it out in [Part I](ps-gui-future-1). Equally, if you've already written your UI and just want to know how to execute the PowerShell, you can jump ahead to [Part III : PowerShell...and JavaScript...](ps-gui-future-3/)
+If you haven't already read how to create the XAML form which will be holding the HTML, please check it out in [Part I](ps-gui-future-1). Equally, if you've already written your UI and just want to know how to execute the PowerShell, you can jump ahead to [Part III : PowerShell...and JavaScript...](ps-gui-future-3)
 
 ## Concept
 
@@ -140,7 +140,7 @@ So now you should have a basic understanding on how you can build a simple confe
 
 insert picture
 
-This is a relatively basic example of what can be done using HTML and CSS and something that could be easily improved upon. In [Part III](ps-gui-future-3/) I'm going to show you how to change this static webpage into something a little more dynamic; collapsible panels, dynamic PowerShell queries and more.
+This is a relatively basic example of what can be done using HTML and CSS and something that could be easily improved upon. In [Part III](ps-gui-future-3) I'm going to show you how to change this static webpage into something a little more dynamic; collapsible panels, dynamic PowerShell queries and more.
 
 Considering this HTML could be easily improved by someone with better HTML knowledge, I encourage you to [fork](https://github.com/rdbartram/PSConfEUGUI/fork) my project on GitHub and create Pull Requests so that others can learn from what you have to offer. This blog is meant to be a community project after all.
 

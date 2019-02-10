@@ -6,7 +6,7 @@ author: rdbartram
 title: Hello-World!
 description: The very first blog post I've ever written. Setting out some expectations for the future and of course, a bit of PowerShell.
 excerpt: The very first blog post I've ever written. Setting out some expectations for the future and of course, a bit of PowerShell.
-cover: true
+cover: false
 coverAlt: Golden robot standing next to sign saying Hello World.
 demo:
 audio:
@@ -20,9 +20,9 @@ updated_at: 2017-04-06 19:00
 
 meta:
   - property: og:image
-    content: /images/posts/2017/4/hello-world.png
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: /images/posts/2017/4/hello-world.png
+    content: /share/dftai-image-share.png
 ---
 
 

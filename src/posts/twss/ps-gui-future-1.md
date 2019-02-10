@@ -6,7 +6,7 @@ author: rdbartram
 title: "the PowerShell GUI of the future I : Dawn Of A New Day"
 description: Creating GUIs in PowerShell is possible but how useful is it day to day
 excerpt: Creating GUIs in PowerShell is possible but how useful is it day to day
-cover: true
+cover: false
 coverAlt: Illustration of the sun rising on a new day
 demo: https://github.com/rdbartram/PSConfEUGUI
 audio:
@@ -20,9 +20,9 @@ updated_at: 2017-04-08 19:00
 
 meta:
   - property: og:image
-    content: /images/posts/2017/4/ps-gui-future-1.png
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: /images/posts/2017/4/ps-gui-future-1.png
+    content: /share/dftai-image-share.png
 ---
 
 So I was looking at the [PSConf EU](http://www.psconf.eu/) webpage, deciding whether I should go or not, when I saw that there was a challenge to take the data from the conference agenda and wrap it in a PowerShell GUI. I have written GUIs before using XAML, but I just didn't like how unreadable they were. XAML isn't as broadly known as some other markup languages (foreshadowing) and having to hook up all the event handlers in PowerShell was just something that made me say eeeeeee!!!
