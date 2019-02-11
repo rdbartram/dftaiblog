@@ -42,6 +42,10 @@ module.exports = {
         {
           label: "CONTACT",
           path: "/contact/"
+        },
+        {
+          label: "PRIVACY",
+          path: "/privacy/"
         }
       ]
     },

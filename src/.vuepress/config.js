@@ -7,7 +7,7 @@ module.exports = {
   base: '/',
   title: '',
   head,
-  ga: 'UA-70393520-1',
+  ga: 'UA-134290946-1',
   evergreen: true,
   serviceWorker: true,
   locales: {

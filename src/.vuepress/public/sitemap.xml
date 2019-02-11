@@ -97,4 +97,8 @@
         <loc>https://www.dftai.ch/posts/updates/hello-world.html</loc>
         <changefreq>daily</changefreq>
     </url>
+    <url>
+        <loc>https://www.dftai.ch/privacy/</loc>
+        <changefreq>daily</changefreq>
+    </url>
 </urlset>

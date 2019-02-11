@@ -24,8 +24,8 @@ module.exports = {
   lazyLoad: {},
   share: {
     facebook: {
-      appId: "300268227446469",
-      version: "v3.1"
+      appId: "2220224731528825",
+      version: "v3.2"
     }
   },
   elevator: {
