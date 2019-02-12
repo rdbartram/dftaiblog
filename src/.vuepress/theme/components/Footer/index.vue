@@ -130,7 +130,7 @@
 </template>
 
 <script>
-import postsmixin from "@theme/mixins/posts";
+import PostsMixin from '@theme/mixins/Posts'
 export default {
   name: "Footer",
 
@@ -151,7 +151,7 @@ export default {
     }
   },
 
-  mixins: [postsmixin]
+  mixins: [PostsMixin]
 };
 </script>
 
