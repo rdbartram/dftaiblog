@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "node_modules/.bin/vuepress dev src",
-    "build": "node_modules/.bin/vuepress build src",
-    "deploy": "npm run build && firebase deploy",
+    "build": "node_modules/.bin/vuepress build src && vuepress-sitemap -H https://www.dftai.ch -d src/.vuepress/dist",
     "staging": "surge src/.vuepress/dist/dftai.surge.sh"
   },
   "repository": {
@@ -27,9 +26,7 @@
   },
   "homepage": "https://github.com/rdbartram/dftai#readme",
   "devDependencies": {
-    "vuepress": "^0.14.2"
-  },
-  "dependencies": {
+    "vuepress": "^0.14.2",
     "carbon-grid": "^1.1.2",
     "elevator.js": "^1.0.1",
     "fontfaceobserver": "^2.0.13",
