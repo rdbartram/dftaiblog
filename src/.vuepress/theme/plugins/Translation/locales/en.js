@@ -18,6 +18,7 @@ module.exports = {
   all_posts_author: 'All posts of',
   share: 'Share',
   see_demo: 'See demo',
+  repos: 'Repositories',
   table_content: 'Table of contents',
   avatar_of: 'Avatar photo of',
   joined: 'Joined',
@@ -40,7 +41,7 @@ module.exports = {
   news_title: 'Receive our latest content directly in your inbox.',
   subscribe: 'subscribe',
   // 404 page
-  title_404: 'Opsss! You\'re lost, I\'ll help you..',
+  title_404: 'Ooops! You\'re lost, I\'ll help you..',
   text_404: 'We apologize for the inconvenience if the link you clicked is down, but we resolve it easy, just click the button below to return to the homepage. We\'ll see you there.',
   back_to_homepage: 'Back to home page',
   // Translate routes
