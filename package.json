@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/rdbartram/dftai#readme",
   "devDependencies": {
-    "vuepress": "^0.14.2",
     "carbon-grid": "^1.1.2",
     "elevator.js": "^1.0.1",
+    "esm": "^3.2.4",
     "fontfaceobserver": "^2.0.13",
     "get-youtube-id": "^1.0.0",
     "intersection-observer": "^0.5.0",
@@ -37,6 +37,9 @@
     "time-ago": "^0.2.1",
     "vue-announcer": "^1.0.2",
     "vue-disqus": "^3.0.4",
-    "vue-global-events": "^1.0.3"
-  }
+    "vue-global-events": "^1.0.3",
+    "vuepress": "^0.14.2",
+    "vuepress-plugin-sitemap": "^2.1.1"
+  },
+  "dependencies": {}
 }
