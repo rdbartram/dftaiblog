@@ -4,84 +4,91 @@
       <h3>{{ $t(label) }}</h3>
       <ul class="more-posts__list">
         <li v-if="posts.length" class="more-posts__item">
-          <card-post
-            v-for="post in posts"
-            :key="post.key"
-            :item="post"
-            cover="right" />
+          <card-post v-for="post in posts" :key="post.key" :item="post" cover="right" class="card-post"/>
         </li>
         <li v-else class="more-posts__item">
-           <h2>😔 {{ $t('no_more_posts') }}.</h2>
+          <h2>😔 {{ $t('no_more_posts') }}.</h2>
         </li>
       </ul>
       <div v-if="posts.length" class="allposts-button">
         <router-link to="/posts/">
-          <kt-button type="button" color="primary">
-            {{ $t('see_all_posts') }}
-          </kt-button>
+          <kt-button type="button" color="primary">{{ $t('see_all_posts') }}</kt-button>
         </router-link>
       </div>
     </div>
     <div class="column more-sidebar sm-100 md-33">
-      <slot name="sidebar" />
+      <slot name="sidebar"/>
     </div>
   </section>
 </template>
 
 <script>
-  import CardPost from '@theme/components/CardPost'
-  import KtButton from '@theme/components/UI/Button'
+import CardPost from "@theme/components/CardPost";
+import KtButton from "@theme/components/UI/Button";
 
-  export default {
-    name: 'MorePosts',
+export default {
+  name: "MorePosts",
 
-    components: {
-      CardPost,
-      KtButton
+  components: {
+    CardPost,
+    KtButton
+  },
+
+  props: {
+    label: {
+      type: String,
+      default: "more_posts"
     },
-
-    props: {
-      label: {
-        type: String,
-        default: 'more_posts'
-      },
-      posts: {
-        type: Array,
-        required: true
-      }
+    posts: {
+      type: Array,
+      required: true
     }
   }
+};
 </script>
 
 <style lang="stylus">
-@import '~@theme/styles/config.styl'
+@import '~@theme/styles/config.styl';
 
-.section-more
-  border-top: 1px solid $borderColor
+.section-more {
+  border-top: 1px solid $borderColor;
+}
 
-.more-posts
-  &__list
-    margin-top: 30px
-  
-  &.column
-    padding-right: 30px
+.more-posts {
+  &__list {
+    margin-top: 30px;
+  }
 
-.allposts-button
-  margin-top: 50px
-  text-align: center
+  &.column {
+    padding-right: 30px;
+  }
+}
 
-  .ui-button
-    text-transform: uppercase
+.allposts-button {
+  margin-top: 50px;
+  text-align: center;
 
-.more-sidebar
-  @media (min-width: $max-tablet)
-    border-left: 1px solid $borderColor
+  .ui-button {
+    text-transform: uppercase;
+  }
+}
 
-  &.column
-    padding-left: 30px
+.more-sidebar {
+  @media (min-width: $max-tablet) {
+    border-left: 1px solid $borderColor;
+  }
 
-.more-posts, .more-sidebar
-  padding-top: 30px
-  padding-bottom: 30px
+  &.column {
+    padding-left: 30px;
+  }
+}
 
+.more-posts, .more-sidebar {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.card-post {
+  margin-top: 12px;
+}
 </style>
