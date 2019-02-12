@@ -36,11 +36,11 @@ Below is a list of links to all the currently available posts so it's easy for y
 
 ## Topics
 
-*   Timers and Webhooks
-*   Azure Queues and Cosmos DB
-*   Function Keys and key specific configuration data
-*   Monitoring with Insights and OMS
-*   Unit testing C#, JavaScript & PowerShell
+* Timers and Webhooks
+* Azure Queues and Cosmos DB
+* Function Keys and key specific configuration data
+* Monitoring with Insights and OMS
+* Unit testing C#, JavaScript & PowerShell
 
 ## What are Azure Functions?
 
@@ -56,10 +56,10 @@ Throughout these posts I'm going to be referring to a series of functions I have
 
 Checking out the actual functions code on [GitHub](https://github.com/rdbartram/AzureFunctions-Spotify) you'll see there are 4 Functions defined.
 
-*   **SaveSpotifySessionInfo** - this allows you to upload the clientIds and secrets used for oAuth. They are saved per function key
-*   **SpotifyGraphHook** - this is an endpoint for a Microsoft Graph subscription and is triggered every time you get an email and writes the subsequent request into an Azure Messaging Queue
-*   **SpotifyPlaySong** - triggered by messages in the queue. The JSON body is parsed and searches for a song before playing it on the most recently used Spotify device
-*   **SpotifyStart** - this simply resumes playback on the last used Spotify device
+* **SaveSpotifySessionInfo** - this allows you to upload the clientIds and secrets used for oAuth. They are saved per function key
+* **SpotifyGraphHook** - this is an endpoint for a Microsoft Graph subscription and is triggered every time you get an email and writes the subsequent request into an Azure Messaging Queue
+* **SpotifyPlaySong** - triggered by messages in the queue. The JSON body is parsed and searches for a song before playing it on the most recently used Spotify device
+* **SpotifyStart** - this simply resumes playback on the last used Spotify device
 
 ## Timers
 
@@ -83,9 +83,9 @@ Easy? Let's try creating a PowerShell webhook to do something similar. The commi
 
 To do this you will need the following:
 
-*   Azure Account
-*   GitHub Account
-*   A code repository in GitHub
+* Azure Account
+* GitHub Account
+* A code repository in GitHub
 
 Once you have all of those, you'll need a function app. If you haven't got one, create one in the Azure Portal like so.
 

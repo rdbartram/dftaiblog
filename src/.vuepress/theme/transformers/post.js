@@ -14,6 +14,7 @@ const schema = {
   excerpt: 'frontmatter.excerpt',
   categories: 'frontmatter.categories',
   tags: 'frontmatter.tags',
+  readtime: 'frontmatter.readtime',
   created_at: 'frontmatter.created_at',
   updated_at: 'frontmatter.updated_at',
   cover: 'frontmatter.cover',

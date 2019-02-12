@@ -17,25 +17,30 @@
         <router-link class="card-title" :to="item.path">
           <h2 class="card-title__text">{{ item.title }}</h2>
         </router-link>
-        <div class="card-category">
-          <router-link
-            class="card-category__link"
-            :to="getCurrentCategory.path"
-            :aria-labelledby="`sr-link-cat-${item.key}`"
-          >
-            <bullet :type="item.categories[0]"/>
-            <span class="meta-text">{{ getCurrentCategory.frontmatter.title }}</span>
-          </router-link>
-          <span
-            hidden
-            :id="`sr-link-cat-${item.key}`"
-          >{{ $t('labelledby_cat_card_post') }} {{ getCurrentCategory.frontmatter.title }}</span>
-        </div>
         {{item.description}}
       </header>
       <aside class="row card-info">
         <div class="column xs-50">
           <ul class="card-info__list">
+            <li class="card-info__item">
+              <div class="card-category">
+                <router-link
+                  class="card-category__link"
+                  :to="getCurrentCategory.path"
+                  :aria-labelledby="`sr-link-cat-${item.key}`"
+                >
+                  <bullet :type="item.categories[0]"/>
+                  <span class="meta-text">{{ getCurrentCategory.frontmatter.title }}</span>
+                </router-link>
+                <span
+                  hidden
+                  :id="`sr-link-cat-${item.key}`"
+                >{{ $t('labelledby_cat_card_post') }} {{ getCurrentCategory.frontmatter.title }}</span>
+              </div>
+            </li>
+            <li class="card-info__item" v-if="item.readtime">
+              <div class="card-title-ttr" v-show="item.readtime">{{item.readtime}} to read</div>
+            </li>
             <li class="card-info__item">
               <time-provider type="ago" :date="item.created_at">
                 <time
@@ -150,7 +155,11 @@ export default {
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+
+  &.card--cover-top {
+    flex-direction: column;
+  }
 
   &.box-default {
     padding: 0;
@@ -183,6 +192,13 @@ export default {
 
     &--right {
       padding-left: 30px;
+
+      .card-cover__image {
+        height: 100%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+        }
     }
   }
 
@@ -311,5 +327,14 @@ export default {
   height: 220px;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
+}
+
+.card-title-ttr {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.card-info__item {
+  padding-right: 8px;
 }
 </style>

@@ -55,7 +55,7 @@
               class="footer__card-author"
               :shadow="false"
               :author="author"
-              v-for="author in getAuthor.sort(function(a, b){return getAmountPostsByAuthorAsInt(b) - getAmountPostsByAuthorAsInt(a)}).slice(0, 3)"
+              v-for="author in getAuthors"
             />
             <div class="watermark-logo"></div>
           </lazy-load>
@@ -148,6 +148,12 @@ export default {
       return this.$authors.filter(author => {
         return author.frontmatter.lang === this.$localeConfig.lang;
       });
+    },
+
+    getAuthors() {
+      return this.getAuthor.sort(function(a, b){
+        return getAmountPostsByAuthorAsInt(b) - getAmountPostsByAuthorAsInt(a)
+        }).slice(0, 3);
     }
   },
 
