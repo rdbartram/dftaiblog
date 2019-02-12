@@ -59,7 +59,7 @@ configuration SpectreFix {
         }
 
         Registry MinVmVersionForCpuBasedMitigations {
-            Key       = "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization"
+            Key       = "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Virtualization"
             ValueName = "MinVmVersionForCpuBasedMitigations"
             ValueData = "1.0"
             ValueType = 'String'

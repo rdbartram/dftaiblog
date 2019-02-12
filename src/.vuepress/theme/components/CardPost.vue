@@ -66,7 +66,7 @@
       <router-link :to="item.path">
         <img
           class="card-cover__image card-cover__image--side cover"
-          :src="getSideImage(item.coverName)"
+          :src="getSideImage(item.coverFullPath || item.coverName)"
           :alt="item.coverAlt">
       </router-link>
     </div>
