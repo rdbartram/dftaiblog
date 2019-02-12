@@ -1,33 +1,19 @@
 <template>
   <article class="card box-default" :class="{ 'card--cover-top': isCoverPosition('top') }">
+    <div class="card-cover" v-if="isCoverPosition('top')">
+      <router-link :to="item.path" :aria-labelledby="`sr-link-post-${item.key}`">
+        <responsive-picture :coverName="`${item.coverFullPath || item.coverName}`">
+          <img
+            class="card-cover__image card-cover__image--top cover"
+            :src="`${item.coverFullPath || item.coverName},w_${lastBreakpoint}.${extension}`"
+            :title="item.coverAlt"
+            :alt="item.coverAlt"
+          >
+        </responsive-picture>
+      </router-link>
+    </div>
     <div class="card__box1" :class="`card__box1--${cover}`">
       <header>
-        <div class="card-category">
-          <router-link
-            class="card-category__link"
-            :to="getCurrentCategory.path"
-            :aria-labelledby="`sr-link-cat-${item.key}`"
-          >
-            <bullet :type="item.categories[0]"/>
-            <span class="meta-text">{{ getCurrentCategory.frontmatter.title }}</span>
-          </router-link>
-          <span
-            hidden
-            :id="`sr-link-cat-${item.key}`"
-          >{{ $t('labelledby_cat_card_post') }} {{ getCurrentCategory.frontmatter.title }}</span>
-        </div>
-        <div class="card-cover" v-if="isCoverPosition('top')">
-          <router-link :to="item.path" :aria-labelledby="`sr-link-post-${item.key}`">
-            <responsive-picture :coverName="`${item.coverFullPath || item.coverName}`">
-              <img
-                class="card-cover__image card-cover__image--top cover"
-                :src="`${item.coverFullPath || item.coverName},w_${lastBreakpoint}.${extension}`"
-                :title="item.coverAlt"
-                :alt="item.coverAlt"
-              >
-            </responsive-picture>
-          </router-link>
-        </div>
         <router-link class="card-title" :to="item.path">
           <h2 class="card-title__text">{{ item.title }}</h2>
         </router-link>
@@ -36,6 +22,25 @@
       <aside class="row card-info">
         <div class="column xs-50">
           <ul class="card-info__list">
+            <li class="card-info__item">
+              <div class="card-category">
+                <router-link
+                  class="card-category__link"
+                  :to="getCurrentCategory.path"
+                  :aria-labelledby="`sr-link-cat-${item.key}`"
+                >
+                  <bullet :type="item.categories[0]"/>
+                  <span class="meta-text">{{ getCurrentCategory.frontmatter.title }}</span>
+                </router-link>
+                <span
+                  hidden
+                  :id="`sr-link-cat-${item.key}`"
+                >{{ $t('labelledby_cat_card_post') }} {{ getCurrentCategory.frontmatter.title }}</span>
+              </div>
+            </li>
+            <li class="card-info__item" v-if="item.readtime">
+              <div class="card-title-ttr" v-show="item.readtime">{{item.readtime}} to read</div>
+            </li>
             <li class="card-info__item">
               <time-provider type="ago" :date="item.created_at">
                 <time
@@ -150,18 +155,26 @@ export default {
 
 .card {
   display: flex;
+  flex-direction: row;
+
+  &.card--cover-top {
+    flex-direction: column;
+  }
 
   &.box-default {
-    padding-bottom: 0;
+    padding: 0;
   }
 
   &--cover-top .card-title {
-    height: 84px;
+    height: 24px;
   }
 
   &__box1 {
     width: 100%;
     min-width: 120px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 16px;
 
     &--left {
       order: 2;
@@ -179,6 +192,13 @@ export default {
 
     &--right {
       padding-left: 30px;
+
+      .card-cover__image {
+        height: 100%;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+        }
     }
   }
 
@@ -196,14 +216,14 @@ export default {
 .card-category {
   &__link {
     display: inline-block;
-    margin-bottom: 10px;
   }
 }
 
 .card-cover {
   width: 100%;
-  height: 150px;
+  height: 200px;
   margin-bottom: 20px;
+  display: block;
 
   &__image {
     width: 100%;
@@ -301,5 +321,20 @@ export default {
   100% {
     left: -5px;
   }
+}
+
+.card-cover__image {
+  height: 220px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.card-title-ttr {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+
+.card-info__item {
+  padding-right: 8px;
 }
 </style>
