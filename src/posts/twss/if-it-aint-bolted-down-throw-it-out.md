@@ -38,8 +38,7 @@ Why? you ask, was I returning multiple Booleans, you fool. I needed to pull spec
 
 What I want to show you today is there is a way you can emulate the behaviour of Binary Modules (outputting only that what you explicitly say) in your script modules. This has the benefit of both speed and the knowledge that only things you explicitly output which show up in the success stream.
 
-Code
-====
+## Code
 
 The way to implement this into your code only requires one key word \[void\]. This one keyword works similar to | Out-Null but doesn't require the data to first be sent through the pipeline.
 

@@ -1,12 +1,12 @@
 <template>
-  <article 
-    class="card box-default" 
+  <article
+    class="card box-default"
     :class="{ 'card--cover-top': isCoverPosition('top') }">
     <div class="card__box1" :class="`card__box1--${cover}`">
       <header>
         <div class="card-category">
-          <router-link 
-            class="card-category__link" 
+          <router-link
+            class="card-category__link"
             :to="getCurrentCategory.path"
             :aria-labelledby="`sr-link-cat-${item.key}`" >
             <bullet :type="item.categories[0]" />
@@ -18,13 +18,13 @@
         </div>
         <div class="card-cover" v-if="isCoverPosition('top')">
           <router-link :to="item.path" :aria-labelledby="`sr-link-post-${item.key}`">
-            <responsive-picture :coverName="item.coverName">
-              <img    
-                class="card-cover__image card-cover__image--top cover"
-                :src="`${item.coverName},w_${lastBreakpoint}.${extension}`" 
-                :title="item.coverAlt"
-                :alt="item.coverAlt"> 
-            </responsive-picture>
+            <responsive-picture :coverName="`${item.coverFullPath || item.coverName}`">
+            <img
+              class="card-cover__image card-cover__image--top cover"
+              :src="`${item.coverFullPath || item.coverName},w_${lastBreakpoint}.${extension}`"
+              :title="item.coverAlt"
+              :alt="item.coverAlt">
+          </responsive-picture>
           </router-link>
         </div>
         <router-link class="card-title" :to="item.path">
@@ -36,13 +36,13 @@
           <ul class="card-info__list">
             <li class="card-info__item">
               <time-provider type="ago" :date="item.created_at">
-                <time 
-                  :datetime="`${item.created_at}`" 
+                <time
+                  :datetime="`${item.created_at}`"
                   class="card-timeago"
                   slot-scope="{ time }">
                     {{ time }}
                 </time>
-              </time-provider>              
+              </time-provider>
             </li>
             <li v-if="item.video" class="card-info__item">
               <span class="youtube-play"></span>
@@ -50,8 +50,8 @@
           </ul>
         </div>
         <div class="column xs-50">
-          <router-link 
-            class="card-readmore" 
+          <router-link
+            class="card-readmore"
             :to="item.path"
             :aria-labelledby="`sr-link-post-${item.key}`">
               <span class="card-readmore__text">{{ $t('see_post') }}</span>
@@ -64,9 +64,9 @@
 
     <div class="card__box2" :class="`card__box2--${cover}`" v-if="item.cover && cover && !isCoverPosition('top')">
       <router-link :to="item.path">
-        <img 
-          class="card-cover__image card-cover__image--side cover" 
-          :src="getSideImage(item.coverName)" 
+        <img
+          class="card-cover__image card-cover__image--side cover"
+          :src="getSideImage(item.coverName)"
           :alt="item.coverAlt">
       </router-link>
     </div>
@@ -133,7 +133,7 @@
 
 .card
   display: flex
-  
+
   &.box-default
     padding-bottom: 0
 
@@ -214,7 +214,7 @@
     display: inline-flex
 
     .youtube-play
-      top: 3px 
+      top: 3px
 
 
 .card-readtime, .card-timeago, .card-readmore

@@ -34,8 +34,7 @@ A quick run down of how this series is going to work. I've got a series of topic
 
 Below is a list of links to all the currently available posts so it's easy for you guys to jump from topic to topic. If you'd like something covered that I haven't written about, comment or tweet me and I'll try to respond to you and if necessary get a post done as soon as possible.
 
-Topics
-======
+## Topics
 
 *   Timers and Webhooks
 *   Azure Queues and Cosmos DB
@@ -43,8 +42,7 @@ Topics
 *   Monitoring with Insights and OMS
 *   Unit testing C#, JavaScript & PowerShell
 
-What are Azure Functions?
-=========================
+## What are Azure Functions?
 
 I guess before we get into the nitty gritty of how to develop and configure them, it would be good to know, what are Azure Functions?
 
@@ -52,8 +50,7 @@ Really simply put, they are generally small pieces of code or **Functions** that
 
 They can be written in many different languages including C#, JavaScript, PowerShell, Bash, TypeScript among others. These things really are so flexible and allow almost any developer to come write in their preferred language and connect to whatever they want.
 
-Overview of Example
-===================
+## Overview of Example
 
 Throughout these posts I'm going to be referring to a series of functions I have written to control Spotify. I have published a PowerShell module over on [GitHub](https://github.com/rdbartram/PSSpotify) which is a wrapper for the Spotify public API.
 
@@ -64,8 +61,7 @@ Checking out the actual functions code on [GitHub](https://github.com/rdbartram/
 *   **SpotifyPlaySong** - triggered by messages in the queue. The JSON body is parsed and searches for a song before playing it on the most recently used Spotify device
 *   **SpotifyStart** - this simply resumes playback on the last used Spotify device
 
-Timers
-======
+## Timers
 
 Starting off with the easier of the two triggers, Timer triggers are configured to run on a schedule using CRON expressions. Azure does have examples in the documentation when creating the function, but briefly: CRON has 6 fields which you can use to define when the job should start. The format looks like this **{second} {minute} {hour} {day} {month} {day of the week}**.
 
@@ -75,8 +71,7 @@ Although they are still being used quite a lot for all sorts of processes, timer
 
 If you think you'd run a function once every hour or so; say to check if new entries were written to a SQL table. Most of the time there may not be any new data, regardless, you are paying for the privilege of checking. If however you could subscribe to an event which started your function when a new entry has been written to the database, the function would only be triggered when it was needed. This means you are using less compute time and in turn saving money.
 
-Webhooks
-========
+## Webhooks
 
 The concept of subscribing to events and having your code triggered this way is not new at all but it's something Microsoft is investing in heavily with Azure; they call it EventGrid. Microsoft is implementing many different event handlers into Azure, but the one that is most well known and implemented everywhere is the webhook.
 
@@ -145,8 +140,7 @@ Upon saving, GitHub should send a test message to your function. The state of wh
 
 > <lazy-load tag="img" :data="{ src: 'https://i1.wp.com/icons.iconarchive.com/icons/graphicloads/100-flat/256/info-icon.png?w=75', alt: 'warning icon', width:75, style:'float:left; margin: 0 15px 0 0' }" /> If you would like to know more about the JSON object being sent to your function, you can expand the item in Recent Deliveries and see exactly what was in the header and the body. For testing it is useful, to be able to resend the event, this can also be done from here.
 
-Conclusion
-==========
+## Conclusion
 
 So... We've covered a lot of new topics here; Webhooks especially are something I expect a lot of traditional PowerShell/infrastructure guys haven't had to deal with.
 

@@ -66,6 +66,10 @@
         <changefreq>daily</changefreq>
     </url>
     <url>
+        <loc>https://www.dftai.ch/posts/dsc/28-days-dsc-1.html</loc>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
         <loc>https://www.dftai.ch/posts/dsc/automating-dsc-partial-configuration-name-updates.html</loc>
         <changefreq>daily</changefreq>
     </url>

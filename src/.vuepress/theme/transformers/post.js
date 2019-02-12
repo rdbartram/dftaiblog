@@ -17,6 +17,7 @@ const schema = {
   cover: 'frontmatter.cover',
   coverExt: 'frontmatter.coverExt',
   coverAlt: 'frontmatter.coverAlt',
+  coverFullPath: 'frontmatter.coverFullPath',
   video: 'frontmatter.video',
   coverName: { path: 'path', modifier: getImagePost },
   created_time: { path: 'frontmatter.created_at', modifier: getTime }

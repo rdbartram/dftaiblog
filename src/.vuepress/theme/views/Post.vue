@@ -1,19 +1,19 @@
 <template>
   <div>
     <div class="page page__full row justify-right">
-      <article 
-        class="column xs-100 page__full__box box-default" 
+      <article
+        class="column xs-100 page__full__box box-default"
         itemscope
-        itemprop="blogPost" 
+        itemprop="blogPost"
         itemtype="https://schema.org/BlogPosting">
         <meta itemprop="mainEntityOfPage" :content="currentPost.path">
-        
+
         <header class="page-header page__full-header">
           <back-button />
           <div class="page-header__meta">
             <time-provider type="ago" :date="currentPost.created_at">
-              <time 
-                :datetime="`${currentPost.created_at}`" 
+              <time
+                :datetime="`${currentPost.created_at}`"
                 itemprop="datePublished"
                 class="text"
                 slot-scope="{ time }">
@@ -21,7 +21,7 @@
               </time>
             </time-provider>
             <meta itemprop="dateModified" content="currentPost.updated_at">
-            
+
             <time-provider type="mintoread" v-if="getContent('innerText')" :content="getContent('innerText')">
               <span class="text" slot-scope="{ time }" v-show="time">
                 - <span class="icon">clock</span> <span>{{ time }}</span>
@@ -40,27 +40,27 @@
               </ul>
             </nav>
           </div>
-          <div 
+          <div
             v-if="getAuthor"
-            class="page-header__author" 
-            itemprop="author" 
+            class="page-header__author"
+            itemprop="author"
             itemscope itemtype="https://schema.org/Person">
             <strong>{{ $t('author') }}: </strong>
             <router-link class="link link--filler-s-primary" rel="author" itemprop="url" :to="getAuthor.path">
               <span itemprop="name">{{ getAuthor.frontmatter.name }}</span>
             </router-link>
-          </div>          
+          </div>
         </header>
 
-        <div 
+        <div
           v-if="currentPost.cover && !currentPost.video"
-          class="post-cover" 
+          class="post-cover"
           itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
-          <responsive-picture :coverName="currentPost.coverName">
-            <img    
+          <responsive-picture :coverName="`${currentPost.coverFullPath || currentPost.coverName}`">
+            <img
               class="post-cover__image cover"
-              itemprop="url"  
-              :src="`${currentPost.coverName}.${currentPost.coverExt || $themeConfig.responsive.ext || 'png'}`"
+              itemprop="url"
+              :src="`${currentPost.coverFullPath || currentPost.coverName}.${currentPost.coverExt || $themeConfig.responsive.ext || 'png'}`"
               :title="currentPost.coverAlt"
               :alt="currentPost.coverAlt">
           </responsive-picture>
@@ -92,13 +92,13 @@
           <div class="row">
             <div class="column no-pad-l md-75 xl-67 post-content">
               <div class="post-content__box-player">
-                <div 
-                  v-if="currentPost.audio" 
-                  class="sound-player post-content__player" 
+                <div
+                  v-if="currentPost.audio"
+                  class="sound-player post-content__player"
                   :class="`sound-player--${$themeConfig.players.default}`">
-                  <lazy-load 
-                    tag="iframe" 
-                    :data="getParamsSoundPlayer" />                  
+                  <lazy-load
+                    tag="iframe"
+                    :data="getParamsSoundPlayer" />
                 </div>
               </div>
               <div class="post-content__excerpt">
@@ -109,7 +109,7 @@
               </div>
               <div ref="content" itemprop="articleBody">
                 <Content></Content>
-              </div>       
+              </div>
             </div>
             <div class="column no-pad-r sm-25 xl-33 xsNone smNone post-sidebar">
               <ads class="post-sidebar__bizu" direction="vertical" />
@@ -131,7 +131,7 @@
             </aside>
           </div>
         </section>
-      </article>      
+      </article>
     </div>
     <section v-if="$themeLocaleConfig.newsletter.action" class="row section-newsletter justify-center">
       <div class="column sm-100 md-67 xl-50">
@@ -280,13 +280,13 @@
     @media (max-width: $mobile)
       left: 50%
       transform: translateX(-50%)
-  
+
   .share
     margin-top: 12px
     padding-bottom: 30px
 
 .post-demo-button
-  text-align: right 
+  text-align: right
 
   .icon
     top: -1px
@@ -308,7 +308,7 @@
 
   &__box-player
     overflow: hidden
-  
+
   &__player
     position: relative
     width: 100%

@@ -31,8 +31,7 @@ Just last friday I was pushed an update to Ben Gelens [DSCPullServerAdmin](https
 
 > <lazy-load tag="img" :data="{ src: 'http://icons.iconarchive.com/icons/graphicloads/100-flat/256/warning-icon.png', alt: 'warning icon', width:75, style:'float:left; margin: 0 15px 0 0' }" /> Bare in mind that although this works for both ESENT und SQL based Pull Server DBs, ESENT requires downtime since it only supports single user access. If you were to script the changes, the disruption can be minimised.
 
-Concept
-=======
+## Concept
 
 DSC provides to ways in which clients can retrieve a configuration, by AgentId or by Configuration Name.
 
@@ -48,8 +47,7 @@ When an DSC Client does request multiple configurations, these are referred to a
 
 For more info on Partial Configurations, check out [technet](https://msdn.microsoft.com/en-us/powershell/dsc/partialconfigs) or tweet me.
 
-Table Schema
-============
+## Table Schema
 
 Within the Pull Server database there are 3 Tables. The RegistrationData table contains all the agents which are registered to the pull server including which Configuration Names they are assigned to request.
 
@@ -89,8 +87,7 @@ As soon as multiple configuration names are defined, the client enters partial c
 
 When the client is in either one of the other two modes, it simply downloads the client from the registered Pull Server.
 
-Workarounds
-===========
+## Workarounds
 
 The way to overcome the issue of "Cannot find partial configuration with name: XXX" could be one of the following:
 
@@ -99,8 +96,7 @@ The way to overcome the issue of "Cannot find partial configuration with name: X
 
 The second point, as of writing this, I haven't tested, but if I do I'll be sure to update this post with a link to my GitHub where the sample will be stored.
 
-DSCPullServerAdmin
-==================
+## DSCPullServerAdmin
 
 If you want to automate this using the the DSCPullServerAdmin, you can use the following snippet to take the db offline, set the configuration and bring it back online again.
 
