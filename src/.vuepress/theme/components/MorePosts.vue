@@ -51,7 +51,6 @@ export default {
 @import '~@theme/styles/config.styl';
 
 .section-more {
-  border-top: 1px solid $borderColor;
 }
 
 .more-posts {
@@ -74,9 +73,6 @@ export default {
 }
 
 .more-sidebar {
-  @media (min-width: $max-tablet) {
-    border-left: 1px solid $borderColor;
-  }
 
   &.column {
     padding-left: 30px;
