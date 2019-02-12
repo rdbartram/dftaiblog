@@ -9,7 +9,7 @@ module.exports = {
   head,
   ga: 'UA-134290946-1',
   evergreen: true,
-  serviceWorker: false,
+  serviceWorker: true,
   locales: {
     '/': {
       lang: 'en'
