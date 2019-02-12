@@ -9,16 +9,15 @@
         <meta itemprop="mainEntityOfPage" :content="currentPost.path">
 
         <header class="page-header page__full-header">
-          <back-button />
+          <back-button/>
           <div class="page-header__meta">
             <time-provider type="ago" :date="currentPost.created_at">
               <time
                 :datetime="`${currentPost.created_at}`"
                 itemprop="datePublished"
                 class="text"
-                slot-scope="{ time }">
-                  {{ time }}
-              </time>
+                slot-scope="{ time }"
+              >{{ time }}</time>
             </time-provider>
             <meta itemprop="dateModified" content="currentPost.updated_at">
 
@@ -32,10 +31,16 @@
           <div class="page-header-cat">
             <nav class="page-header-cat__nav">
               <ul class="page-header-cat__list">
-                <li class="page-header-cat__item" v-for="category in getCategories" :key="category.key">
-                  <router-link class="page-header-cat__link meta-text" itemprop="keywords" :to="category.path">
-                    {{ category.frontmatter.title }}
-                  </router-link>
+                <li
+                  class="page-header-cat__item"
+                  v-for="category in getCategories"
+                  :key="category.key"
+                >
+                  <router-link
+                    class="page-header-cat__link meta-text"
+                    itemprop="keywords"
+                    :to="category.path"
+                  >{{ category.frontmatter.title }}</router-link>
                 </li>
               </ul>
             </nav>
@@ -62,19 +67,20 @@
               itemprop="url"
               :src="`${currentPost.coverFullPath || currentPost.coverName}.${currentPost.coverExt || $themeConfig.responsive.ext || 'png'}`"
               :title="currentPost.coverAlt"
-              :alt="currentPost.coverAlt">
+              :alt="currentPost.coverAlt"
+            >
           </responsive-picture>
         </div>
 
         <section class="post-cover post-cover--video" v-if="currentPost.video">
-          <lazy-load tag="iframe" :data="{ src: currentPost.video, height: '100%' }" />
+          <lazy-load tag="iframe" :data="{ src: currentPost.video, height: '100%' }"/>
         </section>
 
         <section class="page-content page__full-content">
           <div class="row">
             <div class="column no-pad-l sm-50 post-share">
               <lazy-load :spinner="false">
-                <share-post :post="currentPost" />
+                <share-post :post="currentPost"/>
               </lazy-load>
             </div>
             <div v-if="currentPost.demo" class="column no-pad-r sm-50 post-demo-button">
@@ -84,9 +90,19 @@
                   <span class="icon icon--arrow">arrow</span>
                 </kt-button>
               </a>
-              <span hidden id="see-demo">
-                {{ $t('see_demo') }} {{ currentPost.title }}
-              </span>
+              <span hidden id="see-demo">{{ $t('see_demo') }} {{ currentPost.title }}</span>
+            </div>
+            <div v-if="currentPost.repo" class="column no-pad-r sm-50 post-demo-button">
+              <h2>{{$t('repos')}}</h2>
+              <ul v-for="r in currentPost.repo">
+                <li>
+                  <a :href="r.url" target="_blank" aria-labelledby="repos">
+                    <kt-button class="repo-button" type="submit" color="primary">
+                      <span class="txt-upper">{{r.name}}</span>
+                    </kt-button>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <div class="row">
@@ -102,30 +118,34 @@
                 </div>
               </div>
               <div class="post-content__excerpt">
-                <h2 class="page-header__subtitle" itemprop="description" v-if="currentPost.excerpt">{{ currentPost.excerpt }}</h2>
+                <h2
+                  class="page-header__subtitle"
+                  itemprop="description"
+                  v-if="currentPost.excerpt"
+                >{{ currentPost.excerpt }}</h2>
               </div>
               <div class="post-content__table-contents" v-if="$page.headers">
-                <table-contents :headers="$page.headers" />
+                <table-contents :headers="$page.headers"/>
               </div>
               <div ref="content" itemprop="articleBody">
                 <Content></Content>
               </div>
             </div>
             <div class="column no-pad-r sm-25 xl-33 xsNone smNone post-sidebar">
-              <ads class="post-sidebar__bizu" direction="vertical" />
+              <ads class="post-sidebar__bizu" direction="vertical"/>
             </div>
             <aside class="column xs-100">
               <hr class="divider">
               <div>
                 <lazy-load :spinner="false">
-                  <share-post :post="currentPost" />
+                  <share-post :post="currentPost"/>
                 </lazy-load>
               </div>
               <hr class="divider">
               <section class="post-content__disqus">
                 <h3>{{ $t('text_comments') }}</h3>
                 <ClientOnly>
-                  <vue-disqus class="mt-30" :shortname="$themeConfig.disqus" />
+                  <vue-disqus class="mt-30" :shortname="$themeConfig.disqus"/>
                 </ClientOnly>
               </section>
             </aside>
@@ -133,100 +153,124 @@
         </section>
       </article>
     </div>
-    <section v-if="$themeLocaleConfig.newsletter.action" class="row section-newsletter justify-center">
+    <section
+      v-if="$themeLocaleConfig.newsletter.action"
+      class="row section-newsletter justify-center"
+    >
       <div class="column sm-100 md-67 xl-50">
-        <newsletter />
+        <newsletter/>
       </div>
     </section>
     <aside class="container main">
       <!-- <more-posts label="related_posts" :posts="relatedPosts">
         <sidebar slot="sidebar" />
-      </more-posts> -->
+      </more-posts>-->
     </aside>
   </div>
 </template>
 
 <script>
-  import ContentMixin from '@theme/mixins/Content'
-  import PostsMixin from '@theme/mixins/Posts'
+import ContentMixin from "@theme/mixins/Content";
+import PostsMixin from "@theme/mixins/Posts";
 
-  import MorePosts from '@theme/components/MorePosts'
-  import Sidebar from '@theme/components/Sidebar'
-  import ResponsivePicture from '@theme/components/ResponsivePicture'
+import MorePosts from "@theme/components/MorePosts";
+import Sidebar from "@theme/components/Sidebar";
+import ResponsivePicture from "@theme/components/ResponsivePicture";
 
-  export default {
-    name: 'Post',
+export default {
+  name: "Post",
 
-    mixins: [ContentMixin, PostsMixin],
+  mixins: [ContentMixin, PostsMixin],
 
-    components: {
-      Sidebar,
-      MorePosts,
-      ResponsivePicture,
-      Ads: () => import(/* webpackChunkName = Ads" */ '@theme/components/Ads'),
-      TimeProvider: () => import(/* webpackChunkName = "Newsletter" */ '@theme/components/Time/Provider'),
-      TableContents: () => import(/* webpackChunkName = TableContents" */ '@theme/components/TableContents'),
-      KtButton: () => import(/* webpackChunkName = SharePost" */ '@theme/components/UI/Button'),
-      SharePost: () => import(/* webpackChunkName = KtButton" */ '@theme/components/SharePost'),
-      VueDisqus: () => import(/* webpackChunkName = "vue-disqus" */ 'vue-disqus/dist/vue-disqus.vue'),
-      BackButton: () => import(/* webpackChunkName = "BackButton" */ '@theme/components/BackButton'),
-      Newsletter: () => import(/* webpackChunkName = "Newsletter" */ '@theme/components/Newsletter'),
-      LazyLoad: () => import(/* webpackChunkName = "LazyLoad" */ '@theme/components/lazy/load')
-    },
+  components: {
+    Sidebar,
+    MorePosts,
+    ResponsivePicture,
+    Ads: () => import(/* webpackChunkName = Ads" */ "@theme/components/Ads"),
+    TimeProvider: () =>
+      import(/* webpackChunkName = "Newsletter" */ "@theme/components/Time/Provider"),
+    TableContents: () =>
+      import(/* webpackChunkName = TableContents" */ "@theme/components/TableContents"),
+    KtButton: () =>
+      import(/* webpackChunkName = SharePost" */ "@theme/components/UI/Button"),
+    SharePost: () =>
+      import(/* webpackChunkName = KtButton" */ "@theme/components/SharePost"),
+    VueDisqus: () =>
+      import(/* webpackChunkName = "vue-disqus" */ "vue-disqus/dist/vue-disqus.vue"),
+    BackButton: () =>
+      import(/* webpackChunkName = "BackButton" */ "@theme/components/BackButton"),
+    Newsletter: () =>
+      import(/* webpackChunkName = "Newsletter" */ "@theme/components/Newsletter"),
+    LazyLoad: () =>
+      import(/* webpackChunkName = "LazyLoad" */ "@theme/components/lazy/load")
+  },
 
-    computed: {
-      getCategories () {
-        return this.$categories.filter(category => {
-          if (this.currentPost.categories.includes(category.frontmatter.slug)) {
-            if (category.frontmatter.lang === this.$localeConfig.lang) return category
-          }
-        })
-      },
-
-      currentPost () {
-        return this.$posts.filter(post => {
-          return post.key === this.$page.key
-        })[0]
-      },
-
-      getAuthor () {
-        const [author] = this.$authors.filter(author => {
-          const fm = author.frontmatter
-          return fm.nickname === this.currentPost.author && fm.lang === this.$localeConfig.lang
-        })
-        if (author) return author
-        return this.$authors.filter(author => author.frontmatter.nickname === this.currentPost.author)[0]
-      },
-
-      relatedPosts () {
-        // return [...this.postsByLang].splice(3, 9)
-      },
-
-      getPlayer () {
-        return this.$themeConfig.players[this.$themeConfig.players.default]
-      },
-
-      getParamsSoundPlayer () {
-        return {
-          src: `${this.getPlayer.url}${this.currentPost.audio}${this.getUrlParams}`,
-          height: 166,
-          allow: 'autoplay'
+  computed: {
+    getCategories() {
+      return this.$categories.filter(category => {
+        if (this.currentPost.categories.includes(category.frontmatter.slug)) {
+          if (category.frontmatter.lang === this.$localeConfig.lang)
+            return category;
         }
-      },
-      getUrlParams () {
-        return '&amp;' + Object.keys(this.getPlayer.params)
-                          .map(key => `${encodeURI(key)}=${encodeURI(this.getPlayer.params[key])}`)
-                          .join('&amp;')
-                          .replace(/#/g, '%23')
-      }
+      });
     },
 
-    methods: {
-      getUrl () {
-        return this.$el.baseURI
-      }
+    currentPost() {
+      return this.$posts.filter(post => {
+        return post.key === this.$page.key;
+      })[0];
+    },
+
+    getAuthor() {
+      const [author] = this.$authors.filter(author => {
+        const fm = author.frontmatter;
+        return (
+          fm.nickname === this.currentPost.author &&
+          fm.lang === this.$localeConfig.lang
+        );
+      });
+      if (author) return author;
+      return this.$authors.filter(
+        author => author.frontmatter.nickname === this.currentPost.author
+      )[0];
+    },
+
+    relatedPosts() {
+      // return [...this.postsByLang].splice(3, 9)
+    },
+
+    getPlayer() {
+      return this.$themeConfig.players[this.$themeConfig.players.default];
+    },
+
+    getParamsSoundPlayer() {
+      return {
+        src: `${this.getPlayer.url}${this.currentPost.audio}${
+          this.getUrlParams
+        }`,
+        height: 166,
+        allow: "autoplay"
+      };
+    },
+    getUrlParams() {
+      return (
+        "&amp;" +
+        Object.keys(this.getPlayer.params)
+          .map(
+            key => `${encodeURI(key)}=${encodeURI(this.getPlayer.params[key])}`
+          )
+          .join("&amp;")
+          .replace(/#/g, "%23")
+      );
+    }
+  },
+
+  methods: {
+    getUrl() {
+      return this.$el.baseURI;
     }
   }
+};
 </script>
 
 <style lang="stylus">
@@ -334,6 +378,13 @@
     max-width: 180px
 
     @media (max-width: $min-large)
-      word-break: break-all
+      word-break: break-all 
 
+.repo-button {
+  width: 180px
+  height: 35px
+  margin-top: 8px
+  text-align: center
+  padding: 0 0 0 0
+}
 </style>

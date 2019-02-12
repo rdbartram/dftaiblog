@@ -1,6 +1,5 @@
 export default function translation (Vue) {
   const langs = {
-    "pt-br": require('./locales/pt-br.js'),
     en: require('./locales/en.js')
   }
 

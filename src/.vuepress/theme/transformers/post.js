@@ -7,6 +7,7 @@ const schema = {
   path: 'path',
   lang: 'frontmatter.lang',
   demo: 'frontmatter.demo',
+  repo: 'frontmatter.repos',
   audio: 'frontmatter.audio',
   author: 'frontmatter.author',
   excerpt: 'frontmatter.excerpt',
