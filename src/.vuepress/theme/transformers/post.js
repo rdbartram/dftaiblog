@@ -10,6 +10,7 @@ const schema = {
   repo: 'frontmatter.repos',
   audio: 'frontmatter.audio',
   author: 'frontmatter.author',
+  description: 'frontmatter.description',
   excerpt: 'frontmatter.excerpt',
   categories: 'frontmatter.categories',
   tags: 'frontmatter.tags',
