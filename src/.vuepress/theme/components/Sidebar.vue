@@ -1,9 +1,6 @@
 <template>
   <div class="sidebar">
     <ads class="sidebar__bizu"/>
-    <div>
-      where to find us
-    </div>
     <div class="sidebar__categories">
       <h3 class="meta-text meta-text--primary">{{ $t('categories') }}</h3>
       <categories-list />
