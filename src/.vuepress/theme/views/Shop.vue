@@ -33,7 +33,7 @@ import KtButton from "@theme/components/UI/Button";
 import ContentMixin from "@theme/mixins/Content";
 
 export default {
-  name: "Page",
+  name: "Shop",
 
   mixins: [ContentMixin],
 
@@ -43,8 +43,6 @@ export default {
       import(/* webpackChunkName = "BackButton" */ "@theme/components/BackButton")
   },
   mounted() {
-  },
-  created() {
     var spread_shop_config = {
         shopName: 'dftai',
         locale: 'en_CH',

@@ -37,8 +37,8 @@
 
   // views
   import Home from '@theme/views/Home'
-  import Shop from '@theme/views/Shop'
   import Page from '@theme/views/Page'
+  import Shop from '@theme/views/Shop'
   import Post from '@theme/views/Post'
   import Posts from '@theme/views/Posts'
   import Category from '@theme/views/Category'
@@ -65,8 +65,8 @@
 
     components: {
       Home,
-      Shop,
       Page,
+      Shop,
       Post,
       Posts,
       Author,
@@ -76,6 +76,7 @@
       LayoutBase,
       LayoutPost,
       LayoutPage,
+      LayoutShop,
       SWUpdatePopup,
       Overlay: () => import(/* webpackChunkName = "Overlay" */ '@theme/components/Overlay'),
       NavMobile: () => import(/* webpackChunkName = "NavMobile" */ '@theme/components/NavMobile'),
