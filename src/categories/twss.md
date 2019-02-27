@@ -8,7 +8,7 @@ excerpt: If there is something short interesting and doesn't quite fit into any 
 slug: twss
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---

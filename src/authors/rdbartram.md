@@ -8,6 +8,10 @@ nickname: rdbartram
 role: Automation Engineer
 avatar: /authors/rdbartram_small.jpg
 created_at: 2019-01-29
+events:
+  - name: Azure Bootcamp Switzerland
+    url: https://global.azurebootcamp.net/locations/switzerland-zurich/
+    date: 04/27/2019
 social:
   - name: twitter
     url: https://twitter.com/rd_bartram

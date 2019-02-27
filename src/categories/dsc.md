@@ -9,7 +9,7 @@ excerpt: Here will be posts about configuration script, resource and configurati
 slug: dsc
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---

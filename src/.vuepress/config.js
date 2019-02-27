@@ -1,28 +1,28 @@
-const path = require('path')
-const head = require('./config/head')
-const themeConfig = require('./config/themeConfig')
-const resolve = pathName => path.join(__dirname, pathName)
+const path = require("path");
+const head = require("./config/head");
+const themeConfig = require("./config/themeConfig");
+const resolve = pathName => path.join(__dirname, pathName);
 
 module.exports = {
-  base: '/',
-  title: '',
+  base: "/",
+  title: "",
   head,
-  ga: 'UA-134290946-1',
+  ga: "UA-134290946-1",
   evergreen: true,
   serviceWorker: true,
   locales: {
-    '/': {
-      lang: 'en'
+    "/": {
+      lang: "en"
     }
   },
   themeConfig,
-  configureWebpack () {
+  configureWebpack() {
     return {
       resolve: {
         alias: {
-          '@public': resolve('./public')
+          "@public": resolve("./public")
         }
       }
-    }
+    };
   }
-}
+};

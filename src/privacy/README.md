@@ -5,9 +5,9 @@ description: "This Privacy Policy is meant to help you understand what informati
 excerpt: "This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information."
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---
 
 Effective date: February 11, 2019

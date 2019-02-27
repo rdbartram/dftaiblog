@@ -5,13 +5,13 @@ description: "Contact DFTAI about anything: blog questions, events, podcasts or 
 excerpt: "Contact DFTAI about anything: blog questions, events, podcasts or just for a chat."
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---
 
 <div class="typeform typeform--fix">
-  <lazy-load tag="iframe" :data="{ src: 'https://ryanbartram.typeform.com/to/hJNEIH', height: 1000 }" />
+  <lazy-load tag="iframe" :data="{ src: '/share/dftai-image-share.png', height: 1000 }" />
 </div>
 
 <div class="email-link">

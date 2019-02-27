@@ -9,7 +9,7 @@ excerpt: Not just theory about PowerShell or automation but rather how to achiev
 slug: azure
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---
