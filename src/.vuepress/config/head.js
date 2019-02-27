@@ -259,23 +259,23 @@ module.exports = [
   ],
 
   // OneSignal
-  [
-    "script",
-    { src: "https://cdn.onesignal.com/sdks/OneSignalSDK.js", async: "" }
-  ],
+  // [
+  //   "script",
+  //   { src: "https://cdn.onesignal.com/sdks/OneSignalSDK.js", async: "" }
+  // ],
 
-  [
-    "script",
-    {},
-    `
-      var OneSignal = window.OneSignal || [];
-      OneSignal.push(function() {
-        OneSignal.init({
-          appId: "34c30a9a-6377-4614-97fb-78384aaaab26",
-        });
-      });
-    `
-  ],
+  // [
+  //   "script",
+  //   {},
+  //   `
+  //     var OneSignal = window.OneSignal || [];
+  //     OneSignal.push(function() {
+  //       OneSignal.init({
+  //         appId: "34c30a9a-6377-4614-97fb-78384aaaab26",
+  //       });
+  //     });
+  //   `
+  // ],
 
   // Spreadshirt
   [
