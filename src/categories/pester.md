@@ -9,7 +9,7 @@ excerpt: The ubiqitous testing framework for PowerShell
 slug: pester
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---

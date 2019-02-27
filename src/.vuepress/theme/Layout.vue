@@ -1,6 +1,6 @@
 <template>
-  <div 
-    class="layout-main" 
+  <div
+    class="layout-main"
     :class="{ 'layout-main__nm--opened': nmOpened, 'layout-main__negative': negative }"
     itemscope itemtype="https://schema.org/WebPage">
 
@@ -13,11 +13,11 @@
     </transition>
     <transition :name="transitionName">
       <component :is="layout" class="wrapper-body__nm" :class="{ 'wrapper-body__nm--opened': nmOpened }">
-        <div slot="view">          
+        <div slot="view">
           <skip-to to="#main" :text="$t('skip_to_main_content')" />
           <component :is="view" />
           <global-events @keyup.esc="cancel" />
-          <back-to-top /> 
+          <back-to-top />
           <overlay />
         </div>
       </component>
@@ -33,9 +33,11 @@
   import LayoutBase from '@theme/layouts/Base'
   import LayoutPost from '@theme/layouts/Post'
   import LayoutPage from '@theme/layouts/Page'
+  import LayoutShop from '@theme/layouts/Shop'
 
   // views
   import Home from '@theme/views/Home'
+  import Shop from '@theme/views/Shop'
   import Page from '@theme/views/Page'
   import Post from '@theme/views/Post'
   import Posts from '@theme/views/Posts'
@@ -55,14 +57,15 @@
   import AnnouncerMixin from '@theme/mixins/Announcer'
 
   import FontFaceObserver from 'fontfaceobserver'
-  
+
   export default {
     name: 'MainLayout',
 
     mixins: [NProgressMixin, AnnouncerMixin],
 
-    components: { 
+    components: {
       Home,
+      Shop,
       Page,
       Post,
       Posts,
@@ -116,7 +119,7 @@
         EventBus.$on('toggle_black_white', data => {
           this.negative = data
         })
-      }      
+      }
     },
 
     beforeMount () {
@@ -187,7 +190,7 @@
   &__nm
     transition: transform .2s ease-in-out
     transform-origin: top center
-    
+
     &--opened
       border-radius: 20px
       overflow: hidden

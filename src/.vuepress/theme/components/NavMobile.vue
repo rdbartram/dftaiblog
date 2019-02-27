@@ -1,11 +1,11 @@
 <template>
-  <nav 
+  <nav
     class="container nav-mobile"
-    aria-label="Navigation" 
+    aria-label="Navigation"
     itemscope itemtype="https://schema.org/SiteNavigationElement">
     <span itemprop="headline" class="nav-mobile__title">{{ $t('navigation') }}</span>
     <ul class="nav-mobile__list">
-      <li 
+      <li
         class="nav-mobile__item"
         v-for="(item, index) in getItemsNavMobile"
         :key="`${item.label}-${index}`">
@@ -32,7 +32,7 @@
           if (category.frontmatter.lang !== this.$localeConfig.lang) return
           return { label: category.frontmatter.title, path: category.path }
         }).filter(category => category)
-        return [...this.$themeLocaleConfig.footer.nav1.items, ...categories]
+        return [...this.$themeLocaleConfig.footer.nav1.items]
       }
     }
   }
@@ -64,7 +64,7 @@
 
     @media (max-width: $mobile)
       width: 50%
-  
+
   &__link
     padding: 12px
     display: block

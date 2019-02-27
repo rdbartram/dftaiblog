@@ -1,14 +1,14 @@
 ---
 view: page
 title: whoami
-description: Find out more about the articles and video platform on web development and lifestyle, ktquez Play by Alan Ktquez.
+description: Find out more about the Ryan Bartram and DFTAI.
 excerpt: Never forgetting to automate it
 ctaContact: true
 meta:
   - property: og:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
   - name: twitter:image
-    content: https://ryanbartram.typeform.com/to/hJNEIH
+    content: /share/dftai-image-share.png
 ---
 
 If there was one word to describe you it would be `autoprogscriptimesaver` (automation, programmer, scripter, timesaver) ;).

@@ -46,13 +46,16 @@ module.exports = {
         {
           label: "PRIVACY",
           path: "/privacy/"
+        },
+        {
+          label: "SHOP",
+          path: "/shop/"
         }
       ]
     },
     nav2: {
       title: "Community",
-      items: [
-      ]
+      items: []
     }
   },
   social: [
