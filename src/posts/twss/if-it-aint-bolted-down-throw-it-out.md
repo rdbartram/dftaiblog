@@ -34,7 +34,7 @@ This is where my interest peaked, since I am a hobby C# developer, I thought to 
 
 In PowerShell, anything not written to a variable or passed along the pipeline is output. This really caused me a headache once when developing a DSC Resource. I remember getting a strange error preventing my Set methods from running, all because my Test methods were returning multiple Booleans.
 
-Why? you ask, was I returning multiple Booleans, you fool. I needed to pull specific parts of string and was using RegEx and the -Match operator and the subsequent $Matches variable. Foolishly, I didn't Out-Null or save the output of -match, hence the Boolean was output.
+Why? you ask, was I returning multiple Booleans, you fool. I needed to pull specific parts of string and was using RegEx and the -Match operator and the subsequent \$Matches variable. Foolishly, I didn't Out-Null or save the output of -match, hence the Boolean was output.
 
 What I want to show you today is there is a way you can emulate the behaviour of Binary Modules (outputting only that what you explicitly say) in your script modules. This has the benefit of both speed and the knowledge that only things you explicitly output which show up in the success stream.
 
@@ -61,9 +61,9 @@ function test {
 There is of course a bit of fluff I wrote and the code itself doesn't do anything particularly useful but this is a case where a cmdlet returns an object which you don't always want.
 Of course, I could save the output to a variable or use | Out-Null but this way the code acts more like a developer would expect and in my opinion is a little cleaner.
 
-In essence you need only wrap your code in \[void\]$() and hopefully you can see the advantage of not having to Out-Null or save everthing in a variable. This makes sure that any objects being returned from this block are dropped.
+In essence you need only wrap your code in \[void\]\$() and hopefully you can see the advantage of not having to Out-Null or save everthing in a variable. This makes sure that any objects being returned from this block are dropped.
 
-The way you return objects from within the \[void\] is by calling the WriteObject method on $PSCmdlet. This is actually all the Write-Output command does anyway.
+The way you return objects from within the \[void\] is by calling the WriteObject method on \$PSCmdlet. This is actually all the Write-Output command does anyway.
 
 Additional to the way the code looks, I have seen performance increases in large iterations using the \[void\] block over Out-Null etc. When doing things like enumerating users in a domain, parsing records in db or files on disk. These small 5, 10, 100 millisecond savings add up.
 

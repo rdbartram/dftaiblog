@@ -3,9 +3,9 @@ view: post
 layout: post
 lang: en
 author: rdbartram
-title: '28 Days of DSC: Day 18 The Finale'
-description: For help debugging an troubleshooting DSC configurations and resources.
-excerpt: For help debugging an troubleshooting DSC configurations and resources.
+title: '28 Days of DSC: Day 28 The Finale'
+description: Welcome to the last post in this series...😭.
+excerpt: Welcome to the last post in this series...😭.
 cover: true
 coverFullPath: /images/28dsc
 categories:
@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - troubleshooting
-readtime: 9 min
+readtime: 3 min
 created_at: 2018-02-28 08:00
 updated_at: 2018-02-28 08:00
 

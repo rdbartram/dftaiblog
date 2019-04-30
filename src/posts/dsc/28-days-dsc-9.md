@@ -14,7 +14,7 @@ tags:
   - dsc
   - resource
   - script resource
-readtime: 9 min
+readtime: 18 min
 created_at: 2018-02-09 08:00
 updated_at: 2018-02-09 08:00
 

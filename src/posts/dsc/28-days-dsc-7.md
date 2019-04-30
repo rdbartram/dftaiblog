@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - troubleshooting
-readtime: 9 min
+readtime: 20 min
 created_at: 2018-02-07 08:00
 updated_at: 2018-02-07 08:00
 
@@ -31,6 +31,7 @@ Day 7, a whole week of DSC. Today we're taking what we learnt yesterday with the
 So what are Composite Resources? Their functionality is basically equal to that of the Nested Configurations we wrote yesterday. The only difference is that they are versioned and exist in a module. This makes it useful to package them and deploy using the PowerShell Gallery for example.
 
 ## Structure
+
 As with normal DSC Modules, their is the Module Manifest and DSCResources folder in the root. Inside the DSCResources folder exists a folder for each Resource you create regardless whether its Script, Composite or otherwise.
 
 For Composite Resources, 2 files need to exist. Firstly, the \<CompositeResourceName>.psd1 manifest and the \<CompositeResourceName>.schema.psm1
@@ -40,6 +41,7 @@ If you've done created all that, you should have something like this.
 ![vscode DSC folder](./images/dftaisqlserverdscfolder.png)
 
 ## The Code
+
 The dftaiSQLSetup.psd1 looks as follows. Both these properties are mandatory.
 
 ```powershell
@@ -189,7 +191,6 @@ This is just another example of how easy it is to simplify the installation of a
 To confirm that everything is working and at least your syntax is correct. You can run the Get-DSCResource command and confirm the newly created resource is visible.
 
 ![Get Composite resource](./images/getdscresource-composite.png)
-
 
 Looking at how we could use this Composite Resource in a configuration, we see just how much easier we've made our and potentially someone else's life.
 

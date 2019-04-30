@@ -3,7 +3,7 @@ view: post
 layout: post
 lang: en
 author: rdbartram
-title: "the PowerShell GUI of the future I : Dawn Of A New Day"
+title: 'the PowerShell GUI of the future I : Dawn Of A New Day'
 description: Creating GUIs in PowerShell is possible but how useful is it day to day
 excerpt: Creating GUIs in PowerShell is possible but how useful is it day to day
 cover: false
@@ -30,8 +30,9 @@ So I was looking at the [PSConf EU](http://www.psconf.eu/) webpage, deciding whe
 I expect you have already seen many different blog posts on PowerShell GUIs. My hope is that from this mini series you might be able to understand a bit better how you could implement this in the real world, rather than it being purely conceptual. Also, I want to be as simple as possible with my explanations, so perhaps you may understand this better than others.
 
 Last couple of things before I get going. As I said, this is a series, you can find the other 2 parts here:
-*  [Part II - HTML and CSS](ps-gui-future-2)
-*  [Part III - PowerShell...and JavaScript...](ps-gui-future-3)
+
+- [Part II - HTML and CSS](ps-gui-future-2)
+- [Part III - PowerShell...and JavaScript...](ps-gui-future-3)
 
 All the code can be found clicking on the demo link at the top of this post. Also, when looking initially into how exactly I could do this, Micah Rairdon and his blog [Tiberriver256](http://tiberriver256.github.io) proved to be very useful. In fact it's almost plagiarism.
 
@@ -39,9 +40,9 @@ All the code can be found clicking on the demo link at the top of this post. Als
 
 So basically the idea here is as follows:
 
-*   create a very basic WPF Form with a Web Browser control
-*   take a single page HTML app and drop it in the browser
-*   use JavaScript to execute functions imported from the PowerShell module
+- create a very basic WPF Form with a Web Browser control
+- take a single page HTML app and drop it in the browser
+- use JavaScript to execute functions imported from the PowerShell module
 
 ## Code
 
@@ -50,12 +51,21 @@ So basically the idea here is as follows:
 So to create the form I'm keeping the XAML (unfortunately), to prevent the need to create a web server in PowerShell and respond to http requests. This is entirely possible and potentially would make it more portable as I believe this would then work on Linux and Mac variants of PowerShell. Perhaps in the future I can write a series on doing that. The XAML is simple, containing just a WebBrowser control called WebBrowser which we can reference later.
 
 ```html
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="$Title" Height="500" Width="700">
-    <Grid>
-        <DockPanel>
-            <WebBrowser Name="WebBrowser" DockPanel.Dock="Top" Margin="30"></WebBrowser>
-        </DockPanel>
-    </Grid>
+<Window
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  Title="$Title"
+  Height="500"
+  Width="700"
+>
+  <Grid>
+    <DockPanel>
+      <WebBrowser
+        Name="WebBrowser"
+        DockPanel.Dock="Top"
+        Margin="30"
+      ></WebBrowser>
+    </DockPanel>
+  </Grid>
 </Window>
 ```
 
@@ -101,6 +111,7 @@ public class PowerShellHelper {
     }
 }
 ```
+
 </details>
 </br>
 Importing the WPF Assemblies and returning a XamlReader based on the XAML passed in the variable.
@@ -126,7 +137,7 @@ function New-GUI {
 }
 ```
 
-After that form can be shown by calling the ShowDialog() method on the XamlReader object($Form).
+After that form can be shown by calling the ShowDialog() method on the XamlReader object(\$Form).
 
 ### Putting it together
 

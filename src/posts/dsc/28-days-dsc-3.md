@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - troubleshooting
-readtime: 9 min
+readtime: 11 min
 created_at: 2018-02-03 08:00
 updated_at: 2018-02-03 08:00
 
@@ -31,14 +31,13 @@ Back again for another 28 Days of DSC post. I'm still refining the order in whic
 There are various different methods of getting access to the DSC job logs, through the Windows Event Log, direct from the log file on disk, using the xDscDiagnostics PowerShell module or from the DSC Compliance Server.
 
 > <lazy-load tag="img" :data="{ src: 'http://icons.iconarchive.com/icons/graphicloads/100-flat/256/info-icon.png', alt: 'info', width:75, style:'float:left; margin: 0 15px 0 0' }" />For the SCOM enthusiasts among you, [here](http://bit.ly/dscscom) is cool blog post by Bruno Saille @ Microsoft about how dsc nodes can be discovered and monitored with a custom MP.
-&nbsp;
-&nbsp;
 
 Again, since I don't want to just type up everything if it's already been done, head over to [docs.microsoft.com](https://docs.microsoft.com/en-us/powershell/dsc/troubleshooting) for a good set of instructions on how to troubleshoot using the Event Log and the xDscDiagnostics Resource.
 
 However, there are a few ways we can automate some of the steps they have documented and what is if the Event Logs haven't been activated and the xDscDiagnostics module isn't available?
 
 ## Enabling Event Logs using xDscDiagnostics
+
 Enabling the Event Logs with the xDscDiagnostics module is as easy 1,2,3
 
 ```powershell
@@ -55,6 +54,7 @@ Enabling the Event Logs with the xDscDiagnostics module is as easy 1,2,3
 Unfortunately there isn't a DSC Resource for this right now but maybe we can create that in a later post.
 
 ## Get-DSCConfigurationStatus command
+
 Using Get-DSCConfigurationStatus returns a summary of the last job's details. Using -All returns then all the logs available.
 
 ![Get DSC Status](./images/dscstatus.png)
@@ -151,14 +151,16 @@ StateChanged         : False
 PSComputerName       :
 ```
 
-> <lazy-load tag="img" :data="{ src: 'http://icons.iconarchive.com/icons/graphicloads/100-flat/256/info-icon.png', alt: 'info', width:75, style:'float:left; margin: 0 15px 0 0' }" />To get just the error in a nice PowerShell format, use ConvertFrom-Json. $ResourceNotInDesiredState.Error | ConvertFrom-Json
+> <lazy-load tag="img" :data="{ src: 'http://icons.iconarchive.com/icons/graphicloads/100-flat/256/info-icon.png', alt: 'info', width:75, style:'float:left; margin: 0 15px 0 0' }" />To get just the error in a nice PowerShell format, use ConvertFrom-Json. \$ResourceNotInDesiredState.Error | ConvertFrom-Json
 
 ## New-xDscDiagnosticsZip
+
 A useful command when working with colleagues to resolve DSC Problems is to send them the logs so that they may analyse and get back to you.
 
 New-xDscDiagnosticsZip pulls information from all the available sources and nicely prepares it to send to friend :).
 
 ## File Based Log Access
+
 In the worst case scenario when none of the previous options are available the disk is still your friend. Every DSC job is written into C:\Windows\System32\Configuration\ConfigurationStatus.
 
 Exactly what would be written to the console, is what will be written to these files i.e. if -Verbose was not given when Start or Update-DSCConfiguration was run, then the verbose output will not be seen in these files.

@@ -91,8 +91,8 @@ When the client is in either one of the other two modes, it simply downloads the
 
 The way to overcome the issue of "Cannot find partial configuration with name: XXX" could be one of the following:
 
-*   Have predefined deployment slots. Much like Azure, 3 or 4 predefined deployment slots could be all that you need. WebFarm1\_dev, WebFarm1\_test, WebFarm1\_prod
-*   Write a script to run regularly and catch this error. When undefined partial config are found, add them dynamically to the LCM
+- Have predefined deployment slots. Much like Azure, 3 or 4 predefined deployment slots could be all that you need. WebFarm1_dev, WebFarm1_test, WebFarm1_prod
+- Write a script to run regularly and catch this error. When undefined partial config are found, add them dynamically to the LCM
 
 The second point, as of writing this, I haven't tested, but if I do I'll be sure to update this post with a link to my GitHub where the sample will be stored.
 

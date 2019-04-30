@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - classes
-readtime: 9 min
+readtime: 18 min
 created_at: 2018-02-15 08:00
 updated_at: 2018-02-15 08:00
 

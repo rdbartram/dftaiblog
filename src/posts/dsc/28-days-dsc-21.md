@@ -14,7 +14,7 @@ tags:
   - dsc
   - classes
   - pester
-readtime: 9 min
+readtime: 21 min
 created_at: 2018-02-21 08:00
 updated_at: 2018-02-21 08:00
 

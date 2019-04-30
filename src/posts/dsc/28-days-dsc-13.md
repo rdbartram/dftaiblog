@@ -14,7 +14,7 @@ tags:
   - dsc
   - DSCManager
   - PullServer
-readtime: 9 min
+readtime: 7 min
 created_at: 2018-02-13 08:00
 updated_at: 2018-02-13 08:00
 
@@ -34,6 +34,7 @@ Anyway...
 Yesterday, I showed you how to get the DSC Manager installed and deployed to your clients. Today, its about the why.
 
 ## Problem With DSC Today
+
 Today, DSC is a amazing way to deploy any and all sorts of applications, configurations and generally a way of automating your environments.
 
 However, there is always the question, how do you onboard your clients? and how do you maintain these configurations over time?
@@ -87,6 +88,7 @@ Multiple configurations can be added and made dependent upon each other.
 ![DSC Assign Multi Config](./images/DSCAssignMultiConfig.png)
 
 ## DSC Manager Going Forward
+
 The goal for DSC Manager in the first phase was to bring equal parity with the current DSC Pull Server. I think those expectations have been met and to some extent exceeded.
 
 What the next phase entails is pushing the boundaries and enabling DSC to reach it's full potential as an automation tool.

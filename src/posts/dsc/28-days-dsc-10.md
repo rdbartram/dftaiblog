@@ -14,7 +14,7 @@ tags:
   - dsc
   - security
   - WMI
-readtime: 9 min
+readtime: 5 min
 created_at: 2018-02-10 08:00
 updated_at: 2018-02-10 08:00
 

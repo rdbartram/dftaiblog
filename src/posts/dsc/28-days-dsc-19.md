@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - pester
-readtime: 9 min
+readtime: 8 min
 created_at: 2018-02-19 08:00
 updated_at: 2018-02-19 08:00
 

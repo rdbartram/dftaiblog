@@ -14,7 +14,7 @@ tags:
   - dsc
   - classes
   - pester
-readtime: 9 min
+readtime: 15 min
 created_at: 2018-02-20 08:00
 updated_at: 2018-02-20 08:00
 
@@ -30,6 +30,7 @@ Hey Guys!
 Day 20! and a continuation of the unit testing story we began yesterday. Since we covered Classes last week and those posts were well received, I'll demonstrate the rest of the Pester tests on that DSC Class.
 
 ## Planning
+
 At the end of the day the better you plan, the easier it is to implement these tests.
 
 Going back to the diagram I showed you way back when, you can see I've altered it a little.

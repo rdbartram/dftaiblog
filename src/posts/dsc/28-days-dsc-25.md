@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - reverse dsc
-readtime: 9 min
+readtime: 7 min
 created_at: 2018-02-25 08:00
 updated_at: 2018-02-25 08:00
 

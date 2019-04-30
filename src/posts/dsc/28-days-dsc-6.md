@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - nested configuration
-readtime: 9 min
+readtime: 12 min
 created_at: 2018-02-06 08:00
 updated_at: 2018-02-06 08:00
 
@@ -127,16 +127,15 @@ You can simplify the main config so much that perhaps you could train your suppo
 
 Pretty neat right?!
 
-
 ## Other Examples
 
 Think about all the scripts and functions you've written today and how you could port them over and use the logic to handle DSC Resource configuration. I can imagine using Nested Resources for the following scenarios:
 
-* User deployment - AD, Mailbox, Skype, SharePoint etc
-* Nic Configurations
-* Disk Configurations
-* File Server Folder Structure and NTFS Permissions
-* Best Practice/Lockdown policies i.e. stopping services, settings reg keys on IIS Server or SQL etc
+- User deployment - AD, Mailbox, Skype, SharePoint etc
+- Nic Configurations
+- Disk Configurations
+- File Server Folder Structure and NTFS Permissions
+- Best Practice/Lockdown policies i.e. stopping services, settings reg keys on IIS Server or SQL etc
 
 This list is virtually endless, the more you automate the less time you have to spend doing tedious tasks. It seems obvious to be telling you this, but sometimes you don't think that spending 5 minutes doing 1 job every now and then costs you a lot. But I imagine if you count up those minutes plus the piece of mind of knowing the system is as you want it (because that's what DSC does) you're really onto a winner!
 

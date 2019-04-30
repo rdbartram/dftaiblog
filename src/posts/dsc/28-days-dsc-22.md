@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - troubleshooting
-readtime: 9 min
+readtime: 4 min
 created_at: 2018-02-22 08:00
 updated_at: 2018-02-22 08:00
 

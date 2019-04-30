@@ -25,7 +25,6 @@ meta:
     content: /share/dftai-image-share.png
 ---
 
-
 Hello to everyone who's looking for a place to come learn and improve their PowerShell, Automation and general programming skills.
 By no means am I an expert but maybe this blog can work to become more than a sum of its parts. A collaborative effort between you and me.
 If I were trying to be a nerd I would illustrate it as code...
@@ -57,6 +56,6 @@ function move-goalpost ($goal) {
 }
 ```
 
-I hopefully have a tonne of good content for you to learn and improve your PowerShell. Check out all my different [series](http://www.dftai.ch/category) in the menu. One series that I plan to have appear frequently is [That's What Shell Said](http://www.dftai.ch/twss/). It's always pinned to the menu and its where I will put all the short tips and tricks you want to know in order to be more efficient and hopefully a better automator. If you do ever want to reach out to me, either do so in the comments or with the #dftai. I am just starting to get into Twitter and hope that I can quickly answer your questions via a tweet. Follow me on Twitter [Follow @rd\_bartram](https://twitter.com/rd_bartram) and if you liked this post, please share it on social media with the hashtag #dftai.
+I hopefully have a tonne of good content for you to learn and improve your PowerShell. Check out all my different [series](http://www.dftai.ch/category) in the menu. One series that I plan to have appear frequently is [That's What Shell Said](http://www.dftai.ch/twss/). It's always pinned to the menu and its where I will put all the short tips and tricks you want to know in order to be more efficient and hopefully a better automator. If you do ever want to reach out to me, either do so in the comments or with the #dftai. I am just starting to get into Twitter and hope that I can quickly answer your questions via a tweet. Follow me on Twitter [Follow @rd_bartram](https://twitter.com/rd_bartram) and if you liked this post, please share it on social media with the hashtag #dftai.
 
 Don't Forget To Automate It

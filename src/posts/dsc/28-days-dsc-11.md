@@ -14,7 +14,7 @@ tags:
   - dsc
   - JEA
   - security
-readtime: 9 min
+readtime: 5 min
 created_at: 2018-02-11 08:00
 updated_at: 2018-02-11 08:00
 

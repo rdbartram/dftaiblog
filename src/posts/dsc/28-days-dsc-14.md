@@ -14,7 +14,7 @@ tags:
   - dsc
   - lcm
   - partial configuration
-readtime: 9 min
+readtime: 13 min
 created_at: 2018-02-14 08:00
 updated_at: 2018-02-14 08:00
 

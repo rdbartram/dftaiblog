@@ -14,7 +14,7 @@ tags:
   - dsc
   - DSC Manager
   - PullServer
-readtime: 9 min
+readtime: 14 min
 created_at: 2018-02-12 08:00
 updated_at: 2018-02-12 08:00
 

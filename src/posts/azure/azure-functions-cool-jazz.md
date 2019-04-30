@@ -3,7 +3,7 @@ view: post
 layout: post
 lang: en
 author: rdbartram
-title: "Azure Functions: How Cool Is This Jazz!"
+title: 'Azure Functions: How Cool Is This Jazz!'
 description: A practical demonstration of Azure Functions with PowerShell and C#. API webhooks, Messaging Queues, Cosmic DB. Code as a Service is here.
 excerpt: A practical demonstration of Azure Functions with PowerShell and C#. API webhooks, Messaging Queues, Cosmic DB. Code as a Service is here.
 cover: false
@@ -36,11 +36,11 @@ Below is a list of links to all the currently available posts so it's easy for y
 
 ## Topics
 
-* Timers and Webhooks
-* Azure Queues and Cosmos DB
-* Function Keys and key specific configuration data
-* Monitoring with Insights and OMS
-* Unit testing C#, JavaScript & PowerShell
+- Timers and Webhooks
+- Azure Queues and Cosmos DB
+- Function Keys and key specific configuration data
+- Monitoring with Insights and OMS
+- Unit testing C#, JavaScript & PowerShell
 
 ## What are Azure Functions?
 
@@ -56,10 +56,10 @@ Throughout these posts I'm going to be referring to a series of functions I have
 
 Checking out the actual functions code on [GitHub](https://github.com/rdbartram/AzureFunctions-Spotify) you'll see there are 4 Functions defined.
 
-* **SaveSpotifySessionInfo** - this allows you to upload the clientIds and secrets used for oAuth. They are saved per function key
-* **SpotifyGraphHook** - this is an endpoint for a Microsoft Graph subscription and is triggered every time you get an email and writes the subsequent request into an Azure Messaging Queue
-* **SpotifyPlaySong** - triggered by messages in the queue. The JSON body is parsed and searches for a song before playing it on the most recently used Spotify device
-* **SpotifyStart** - this simply resumes playback on the last used Spotify device
+- **SaveSpotifySessionInfo** - this allows you to upload the clientIds and secrets used for oAuth. They are saved per function key
+- **SpotifyGraphHook** - this is an endpoint for a Microsoft Graph subscription and is triggered every time you get an email and writes the subsequent request into an Azure Messaging Queue
+- **SpotifyPlaySong** - triggered by messages in the queue. The JSON body is parsed and searches for a song before playing it on the most recently used Spotify device
+- **SpotifyStart** - this simply resumes playback on the last used Spotify device
 
 ## Timers
 
@@ -83,9 +83,9 @@ Easy? Let's try creating a PowerShell webhook to do something similar. The commi
 
 To do this you will need the following:
 
-* Azure Account
-* GitHub Account
-* A code repository in GitHub
+- Azure Account
+- GitHub Account
+- A code repository in GitHub
 
 Once you have all of those, you'll need a function app. If you haven't got one, create one in the Azure Portal like so.
 
@@ -118,7 +118,7 @@ $data = get-content $req -raw | convertfrom-json
 $Issue | ft | out-string
 ```
 
-That's it, you've written an Azure Function! You can see the Function takes the input from the trigger ($req) and outputs a pscustomobject with a couple of useful properties from the GitHub issue i.e Repository name, the user that created the issue etc.
+That's it, you've written an Azure Function! You can see the Function takes the input from the trigger (\$req) and outputs a pscustomobject with a couple of useful properties from the GitHub issue i.e Repository name, the user that created the issue etc.
 
 Obviously, writing this information out to the console isn't all that interesting but imagine you could trigger other processes based on this webhook. Maybe create a ticket, send yourself a text using [Twilio](https://www.twilio.com/) etc. Linking all these components together can make for a powerful solution.
 

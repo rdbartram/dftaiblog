@@ -13,7 +13,7 @@ categories:
 tags:
   - dsc
   - resource
-readtime: 9 min
+readtime: 8 min
 created_at: 2018-02-08 08:00
 updated_at: 2018-02-08 08:00
 
@@ -31,6 +31,7 @@ Day 8 is here and today is the day we start creating our own custom script based
 Today is simply discussing the structure of a DSC Resource. How it works, setting it up, and some things to start thinking about before we start coding.
 
 ## The Concept
+
 In the first post I briefly mentioned that DSC first tests a machines configuration and then in the event it is not compliant, DSC makes it so.
 
 What I didn't tell you was that DSC actually has the ability to not only test a system but also "get" or display the current configuration of a machine.
@@ -56,6 +57,7 @@ Set-TargetResource {
 Now all <strong>you</strong> as the Resource developer has to do, is fill out these empty blocks.
 
 ## Scaffolding
+
 Fortunately, to get you started, Microsoft has provided a PowerShell module, [xDSCResourceDesigner](https://github.com/PowerShell/xDSCResourceDesigner) I would recommend using this rather than trying to create the resources from scratch, you are far less failure prone.
 
 What this module includes is a couple of cmdlets to help you create, update and test your DSC Resources.
@@ -119,7 +121,6 @@ Configuration ADUser
     }
 }
 ```
-
 
 If you've missed any of the other posts from the 28 Days of DSC series, check them out [here](/posts/?tag=dsc).
 

@@ -14,7 +14,7 @@ tags:
   - dsc
   - pester
   - sandboxing
-readtime: 9 min
+readtime: 5 min
 created_at: 2018-02-18 08:00
 updated_at: 2018-02-18 08:00
 

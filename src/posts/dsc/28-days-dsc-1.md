@@ -3,7 +3,7 @@ view: post
 layout: post
 lang: en
 author: rdbartram
-title: "28 Days of DSC: The Basics"
+title: '28 Days of DSC: The Basics'
 description: A DSC post for every day in February. Clear, concise, specific DSC posts which will hopefully improve your DSC configurations, resources and troubleshooting no end.
 excerpt: A DSC post for every day in February. Clear, concise, specific DSC posts which will hopefully improve your DSC configurations, resources and troubleshooting no end.
 cover: true
