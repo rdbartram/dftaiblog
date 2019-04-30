@@ -104,15 +104,15 @@ To confirm everything is working, here are some commands to help you get to grip
 
 You will have noticed that when running the previous command, a PowerShell job was created. To run DSC synchronously, use the following command.
 
-![Start DSC with path](./images/startdscpath-1024x542.png)
+![Start DSC with path](./images/startdscpath.png)
 
 To rerun an existing configuration, do the following.
 
-![Start DSC using existing](./images/startdscuse-1024x525.png)
+![Start DSC using existing](./images/startdscuse.png)
 
 To get the status of the last execution, do the following.
 
-![Get DSC Status](./images/dscstatus-1024x560.png)
+![Get DSC Status](./images/dscstatus.png)
 
 Ok, so this wasn't quite as short as I'd expected. Let me guys know what you think about this idea. Has it already been done? Do you need more info?
 
